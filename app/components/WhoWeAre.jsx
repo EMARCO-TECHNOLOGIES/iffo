@@ -4,7 +4,7 @@ function WhoWeAre() {
     return (
         <div className='flex flex-col justify-center items-center p-10 lg:pb-0 pt-20' id='about'>
             <div className='md:w-[80%]  space-y-10'>
-                <h3 className='text-black  font-semibold text-justify text-xl'>
+                <h3 className='text-black font-semibold text-xl'>
                     Cultivating the future of film in Oman, the International Film Foundation fosters creativity,
                     celebrates diversity, and connects audiences through the power of storytelling.
                     Discover a vibrant film culture, support emerging talents,
