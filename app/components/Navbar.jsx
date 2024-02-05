@@ -52,7 +52,7 @@ function Navbar() {
 
 
         <nav className="bg-white w-full z-20 top-0 start-0 " id='navbar'>
-            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1">
+            <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-1 bg-white">
                 <div className='bg-transparent  rounded-lg ml-5'>
 
                     <a href="#banner" className="flex items-center space-x-3 rtl:space-x-reverse ">
@@ -72,14 +72,14 @@ function Navbar() {
                         </svg>
                     </button>
                 </div>
-                <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                    <ul className="flex flex-col p-4 md:p-0 mt-4 font-semibold text-sm border border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                <div className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1 bg-white" id="navbar-sticky">
+                    <ul className="flex  flex-col p-4 md:p-0 mt-4 font-semibold text-sm border bg-white border-gray-100 rounded-lg  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 ">
                         {navItems.map((item, index) => (
-                            <AnchorLink key={index} href={`#${item.toLowerCase() === 'home' ? 'banner' : item.toLowerCase()}`}>
-                                <li onClick={() => setSelected(item)} key={index}>
-                                    <a href="#" className={`block py-2 px-3 text-[#EC008D]  rounded md:bg-transparent  md:p-0 md:dark:text-[#EC008D] ${selected === item ? 'text-[#EC008D]'
+                            <AnchorLink key={index} className='bg-white' href={`#${item.toLowerCase() === 'home' ? 'banner' : item.toLowerCase()}`}>
+                                <li onClick={() => setSelected(item)} key={index} className='bg-white'>
+                                    <a href="#" className={`block py-2 px-3 text-[#EC008D]  rounded  bg-white md:p-0 md:dark:text-[#EC008D] ${selected === item ? 'text-[#EC008D]'
                                         :
-                                        'block py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:hover:text-[#9c3b75] md:p-0 '
+                                        'block py-2 px-3 bg-white text-gray-900 rounded  md:hover:bg-transparent md:hover:text-[#9c3b75] md:p-0 '
                                         }`} aria-current="page">{item}</a>
                                 </li>
                             </AnchorLink>
@@ -91,13 +91,13 @@ function Navbar() {
             {isOpenNav ?
                 (
 
-                    <div className='bg-white md:hidden  bg-opacity-80'>
-                        <ul className="flex flex-col p-4 md:p-0 mt-4 font-semibold text-sm  rounded-b-lg  space-y-5 rtl:space-x-reverse md:mt-0 md:border-0 dark:bg-gray-100 md:dark:bg-gray-900 dark:border-gray-700">
+                    <div className=' md:hidden  bg-opacity-80'>
+                        <ul className="flex flex-col p-4 md:p-0 mt-4 font-semibold text-sm rounded-b-lg  space-y-5 rtl:space-x-reverse md:mt-0 md:border-0  ">
                             {navItems.map((item, index) => (
                                 <AnchorLink key={index} href={`#${item.toLowerCase() === 'home' ? 'banner' : item.toLowerCase()}`}>
 
-                                    <li onClick={() => { setSelected(item), setOpenNavbar(false) }} key={index} className='border' >
-                                        <a href="#" className={`block py-2 px-3 text-[#EC008D]  rounded md:bg-transparent  md:p-0 md:dark:text-[#EC008D] ${selected === item ? 'text-[#EC008D]'
+                                    <li onClick={() => { setSelected(item), setOpenNavbar(false) }} key={index} className='border bg-white' >
+                                        <a href="#" className={`block py-2 px-3 text-[#EC008D]  rounded md:bg-transparent bg-white  md:p-0 md:dark:text-[#EC008D] ${selected === item ? 'text-[#EC008D]'
                                             :
                                             'block py-2 px-3 text-gray-900 rounded  md:hover:bg-transparent md:hover:text-[#9c3b75] md:p-0 '
                                             }`} aria-current="page">{item}</a>
